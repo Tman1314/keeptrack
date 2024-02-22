@@ -25,7 +25,8 @@ function ProjectList({ projects, onSave }: ProjectsListProps) {
         <div key={project.id} className="cols-sm">
           {project === projectBeingEdited ? (
             <ProjectForm
-            onSave={onSave}
+              project={project}
+              onSave={onSave}
               onCancel={cancelEditing}
             />
           ) : (
