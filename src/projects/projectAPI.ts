@@ -72,6 +72,12 @@ const projectAPI = {
         )
       })
   },
+  find(id: number) {
+    return fetch(`${url}/${id}`)
+      .then(checkStatus)
+      .then(parseJSON)
+      .then(convertToProjectModel)
+  },
 };
 
 export { projectAPI };
